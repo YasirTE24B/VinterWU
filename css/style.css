@@ -50,13 +50,9 @@ main {
     flex-direction: column;
 }
 
-footer {
-    width: 100%;
-}
 
 .utforska-knapp {
     display: flex;
-    /* background-color: #FF5733; */
     background-color: white;
     color: white;
     height: 50px;
@@ -65,15 +61,26 @@ footer {
     align-items: center;
     border: none;
     border-radius: 12.5px;
-    border: 2px solid #FF5733;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*taget från https://www.w3schools.com/css/css3_shadows_box.asp */
+    background: /* taget ifrån css-tricks (https://css-tricks.com/gradient-borders-in-css/) */
+    linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #FF5733, #FFC300) border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .utforska-knapp:hover {
     background-color: rgb(248, 247, 247);
     cursor: pointer; /* så att det ser ut som en riktig knapp */
 }
 
+.lang2 {
+    display: flex;
+    align-self: center;
+    max-width: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
 .vit-text {
     color:white;
@@ -148,3 +155,24 @@ footer {
     margin-bottom: 10px;
     margin-left: 200px;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    color: #463F3A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+
+/* SIDA 2 CSS BÖRJAR HÄR!!!!!!!!!!!!!!!!!!! */
